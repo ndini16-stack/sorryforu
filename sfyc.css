@@ -1,0 +1,257 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&family=Pacifico&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Nunito', sans-serif;
+    background: linear-gradient(135deg, #fff0f5, #ffe1ec, #fff7fa);
+    color: #79465d;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 70px 18px 30px;
+}
+
+.page {
+    display: none;
+    width: 100%;
+    max-width: 480px;
+    animation: appear 0.6s ease;
+}
+
+.page.active {
+    display: block;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.9);
+    border: 2px solid #ffdeeb;
+    border-radius: 28px;
+    padding: 32px 25px;
+    text-align: center;
+    box-shadow: 0 12px 35px rgba(211, 112, 151, 0.15);
+}
+
+.sticker {
+    font-size: 48px;
+    margin-bottom: 12px;
+}
+
+.small-text {
+    color: #d77c9f;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+}
+
+h1, h2 {
+    color: #d65d8c;
+    margin-bottom: 18px;
+    line-height: 1.4;
+}
+
+h1 {
+    font-family: 'Pacifico', cursive;
+    font-size: 32px;
+    font-weight: 400;
+}
+
+h2 {
+    font-size: 25px;
+    font-weight: 800;
+}
+
+.description {
+    font-size: 15px;
+    line-height: 1.8;
+    margin-bottom: 18px;
+}
+
+.tiny {
+    color: #b8899d;
+    font-size: 12px;
+    margin-bottom: 25px;
+}
+
+.letter {
+    text-align: left;
+    font-size: 14px;
+    line-height: 1.9;
+    margin-bottom: 17px;
+}
+
+.center {
+    text-align: center;
+}
+
+.btn {
+    border: none;
+    border-radius: 30px;
+    background: #ed8db1;
+    color: white;
+    padding: 13px 23px;
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 800;
+    cursor: pointer;
+    margin-top: 12px;
+    box-shadow: 0 5px 13px rgba(237, 141, 177, 0.25);
+    transition: 0.25s;
+}
+
+.btn:hover {
+    background: #df709b;
+    transform: translateY(-2px);
+}
+
+.btn:active {
+    transform: scale(0.97);
+}
+
+.secondary {
+    background: #f5bfd2;
+    color: #79465d;
+}
+
+.final-note {
+    color: #d65d8c;
+    font-size: 13px;
+    font-style: italic;
+    margin-top: 22px;
+}
+
+.ending {
+    color: #ed8db1;
+    font-size: 28px;
+    margin: 15px 0;
+}
+
+.music-btn {
+    position: fixed;
+    top: 18px;
+    right: 16px;
+    z-index: 10;
+    border: 1px solid #ffc5dc;
+    background: #fff9fc;
+    color: #d65d8c;
+    border-radius: 30px;
+    padding: 10px 15px;
+    font-family: inherit;
+    font-weight: 800;
+    cursor: pointer;
+}
+
+footer {
+    color: #bd819a;
+    font-size: 11px;
+    text-align: center;
+    margin-top: 25px;
+}
+
+.hearts span {
+    position: fixed;
+    bottom: -40px;
+    color: #f4a4c2;
+    font-size: 22px;
+    opacity: 0.55;
+    pointer-events: none;
+    animation: float 10s linear infinite;
+}
+
+.hearts span:nth-child(1) {
+    left: 8%;
+    animation-delay: 0s;
+}
+
+.hearts span:nth-child(2) {
+    left: 25%;
+    animation-delay: 3s;
+    font-size: 17px;
+}
+
+.hearts span:nth-child(3) {
+    left: 45%;
+    animation-delay: 6s;
+}
+
+.hearts span:nth-child(4) {
+    left: 65%;
+    animation-delay: 1s;
+    font-size: 18px;
+}
+
+.hearts span:nth-child(5) {
+    left: 82%;
+    animation-delay: 4s;
+}
+
+.hearts span:nth-child(6) {
+    left: 94%;
+    animation-delay: 7s;
+    font-size: 16px;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0) rotate(0);
+        opacity: 0;
+    }
+
+    15% {
+        opacity: 0.55;
+    }
+
+    100% {
+        transform: translateY(-115vh) rotate(35deg);
+        opacity: 0;
+    }
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 400px) {
+    .container {
+        padding: 65px 13px 25px;
+    }
+
+    .card {
+        padding: 27px 19px;
+        border-radius: 23px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    h2 {
+        font-size: 22px;
+    }
+
+    .letter {
+        font-size: 13px;
+    }
+}
